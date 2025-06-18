@@ -1,0 +1,16 @@
+
+theme: jekyll-theme-minimal
+title: ""
+description: ""
+#title: Octocat's homepage
+#description: Bookmark this to keep an eye on my project updates!
+
+# _config.yml
+#title: ""  # 留空以隐藏标题
+#author: ""  # 留空以隐藏作者
+#show_downloads: false  # 隐藏下载按钮
+#google_analytics: ""  # 移除 Google Analytics
+
+# 如果使用 minima 主题
+#minima:
+#  header_links: []  # 移除导航链接
