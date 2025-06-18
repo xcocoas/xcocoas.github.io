@@ -1,5 +1,5 @@
 
-[简体中文](/zh/)
+[简体中文](zh/)
 
 # iOS Technical Support
 
