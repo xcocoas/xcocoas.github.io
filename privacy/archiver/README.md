@@ -4,24 +4,25 @@
 ## Overview
 
 This policy will help you understand the following:
+1. **What information will we collect**
+2. **How do we use this information**
+3. **How to delete relevant data**
+4. **Our Commitment**
 
-1. **What information do we collect**
-2. **How we will use this information**
-3. **How to delete related data**
-4. **Our promise**
+## What information will we collect
 
-## What information do we collect
+- During the use of the app, no user privacy data will be collected
+- When importing files into the app, a file copy will be created in the temporary folder of the app
 
-- Archiver is a tool that provides users with a document-based compression and decompression function service. It will not collect user's private data in the background without authorization when using. When the App performs compression and decompression, cache files will be created under the application's tmp folder.
+## How do we use this information
 
-## How we will use this information
+- These file copies are only used for compression and decompression operations and have no other use
 
-- The cache file information is only used to improve the efficiency of compression and decompression functions, not be used otherwise.
+## How to delete relevant data
 
-## How to delete related data
-- Every time the app is closed, all cached file information will be deleted.
-- After the app is uninstalled, all cached file information will also be deleted.
+- Every time the app is closed, all copies of files will be deleted
+- After uninstalling the app, all file copies will also be deleted together
 
-## Our promise
+## Our Promise
 
-- This application only provides content that does not depend on the user's personal privacy data.
+- This application only provides content that does not rely on users' personal privacy data
