@@ -1,7 +1,8 @@
 
-theme: jekyll-theme-minimal
+theme: jekyll-theme-minima
 title: ""
 description: ""
+# header_links: []
 #title: Octocat's homepage
 #description: Bookmark this to keep an eye on my project updates!
 
@@ -12,5 +13,5 @@ description: ""
 #google_analytics: ""  # 移除 Google Analytics
 
 # 如果使用 minima 主题
-#minima:
-#  header_links: []  # 移除导航链接
+minima:
+ header_links: []  # 移除导航链接
