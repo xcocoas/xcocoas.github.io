@@ -1,5 +1,5 @@
 
-[简体中文](/service/?lang=zh)
+[简体中文](/service/lightlive/?lang=zh)
 
 # Terms of Service
 

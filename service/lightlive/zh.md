@@ -1,5 +1,5 @@
 
-[English](/service/?lang=en)
+[English](/service/lightlive/?lang=en)
 
 # 服务条款
 
