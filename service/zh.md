@@ -1,4 +1,6 @@
 
+[English](/service/?lang=en)
+
 # 服务条款
 
 ### **1. 服务概述**

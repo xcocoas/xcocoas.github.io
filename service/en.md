@@ -1,5 +1,7 @@
 
-#Service Terms
+[简体中文](/service/?lang=zh)
+
+# Terms of Service
 
 ### **1. Service Overview**
 
