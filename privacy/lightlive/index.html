@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-touch-fullscreen" content="yes" />
+    <meta name="format-detection" content="telephone=no, email=no">
+
+    <title>Privacy</title>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css"> -->
+    <script src="/decorator/marked.min.js"></script>
+    <link rel="stylesheet" href="/decorator/github-markdown-css">
+
+    <style>
+        .markdown-body {
+            box-sizing: border-box;
+            min-width: 200px;
+            max-width: 980px;
+            margin: 0 auto;
+            padding: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div id="content" class="markdown-body">加载中...</div>
+    
+    <script>
+        fetch("en.md")
+            .then(response => response.text())
+            .then(markdown => {
+                document.getElementById("content").innerHTML = marked.parse(markdown);
+            })
+            .catch(err => {
+                document.getElementById("content").innerHTML = 
+                    `<p style="color: red">无法加载 md 文件: ${err.message}</p>`;
+            });
+    </script>
+</body>
+</html>
