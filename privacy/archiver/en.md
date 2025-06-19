@@ -1,4 +1,6 @@
 
+[简体中文](/privacy/archiver/?lang=zh)
+
 # Privacy Policy
 
 ## Overview

@@ -8,7 +8,7 @@
     <meta name="apple-touch-fullscreen" content="yes" />
     <meta name="format-detection" content="telephone=no, email=no">
 
-    <title>Support</title>
+    <title>Xcocoas</title>
 
     <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css"> -->
@@ -27,17 +27,19 @@
     </style>
 </head>
 <body>
-    <div id="content" class="markdown-body">加载中...</div>
+    <div id="content" class="markdown-body">LOADING ...</div>
     
     <script>
-        fetch("README.md")
+        const filename = 'README.md';
+
+        fetch(filename)
             .then(response => response.text())
             .then(markdown => {
                 document.getElementById("content").innerHTML = marked.parse(markdown);
             })
             .catch(err => {
                 document.getElementById("content").innerHTML = 
-                    `<p style="color: red">无法加载 md 文件: ${err.message}</p>`;
+                    `<p style="color: red">Error loading ${filename}: ${err.message}</p>`;
             });
     </script>
 </body>

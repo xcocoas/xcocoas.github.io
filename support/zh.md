@@ -1,5 +1,5 @@
 
-[English](/support/)
+[English](/support/?lang=en)
 
 # iOS 技术支持
 

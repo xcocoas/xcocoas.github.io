@@ -1,4 +1,6 @@
 
+[简体中文](/privacy/lightlive/?lang=zh)
+
 # Privacy Policy
 
 ## Overview

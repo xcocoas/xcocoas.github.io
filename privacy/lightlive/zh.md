@@ -1,4 +1,6 @@
 
+[English](/privacy/lightlive/?lang=en)
+
 # 隐私政策
 
 ## 概览
