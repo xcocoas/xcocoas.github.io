@@ -9,7 +9,7 @@ This policy will help you understand the following:
 1. **What information will we collect**
 2. **How do we use this information**
 3. **How to delete relevant data**
-4. **Our Commitment**
+4. **Our promise**
 
 ## What information will we collect
 
@@ -25,6 +25,6 @@ This policy will help you understand the following:
 - Every time the app is closed, all copies of files will be deleted
 - After uninstalling the app, all file copies will also be deleted together
 
-## Our Promise
+## Our promise
 
 - This application only provides content that does not rely on users' personal privacy data
