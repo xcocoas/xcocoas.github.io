@@ -27,18 +27,35 @@
     </style>
 </head>
 <body>
-    <div id="content" class="markdown-body">加载中...</div>
+    <div id="content" class="markdown-body">LOADING ...</div>
     
     <script>
-        fetch("en.md")
-            .then(response => response.text())
+        // 获取URL参数
+        const params = new URLSearchParams(window.location.search);
+        const lang = params.get('lang') || 'en'; // 默认英语
+        
+        // 根据参数决定加载哪个文件
+        const fileMap = {
+            'en': 'en.md',
+            'zh': 'zh.md'
+            // 可以添加更多语言
+        };
+        
+        const filename = fileMap[lang] || 'en.md';
+        
+        fetch(filename)
+            .then(response => {
+                if (!response.ok) throw new Error('File not found');
+                return response.text();
+            })
             .then(markdown => {
-                document.getElementById("content").innerHTML = marked.parse(markdown);
+                document.getElementById('content').innerHTML = marked.parse(markdown);
             })
             .catch(err => {
-                document.getElementById("content").innerHTML = 
-                    `<p style="color: red">无法加载 md 文件: ${err.message}</p>`;
+                document.getElementById('content').innerHTML = 
+                    `<p style="color: red">Error loading ${filename}: ${err.message}</p>`;
             });
+
     </script>
 </body>
 </html>
