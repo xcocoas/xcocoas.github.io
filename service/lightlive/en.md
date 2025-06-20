@@ -30,7 +30,7 @@ Lightlive is a utility application that mainly provides services for converting 
 - You are not allowed to modify or crack the subscription function through unofficial channels
 - The subscription account is for personal use only and sharing across multiple devices is prohibited
 
-### **4. Disclaimers
+### **4. Disclaimers**
 - The functionality of this application does not require internet connection, but the subscription status needs to be verified through internet connection
 - We do not assume any responsibility beyond legal requirements for issues caused by device compatibility or system updates
 
