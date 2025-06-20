@@ -31,11 +31,7 @@ Lightlive is a utility application that mainly provides services for converting 
 - The subscription account is for personal use only and sharing across multiple devices is prohibited
 
 ### **4. Disclaimers**
-- The functionality of this application does not require internet connection, but the subscription status needs to be verified through internet connection
+- The functionality of this application does not require internet connection, but subscription status needs to be verified online, and obtaining privacy policies and service terms also requires internet connection
 - We do not assume any responsibility beyond legal requirements for issues caused by device compatibility or system updates
-
-### **5. Other**
-- Privacy Policy: For details on the scope of data collection, please refer to the Privacy Policy link
-- **Change of Terms**: The updated terms will be posted within the application or on the official website, and continued use will be deemed accepted
 
 **Contact email**: [xcocoas@gmail.com]
