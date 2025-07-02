@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>定价 - 我的产品</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@3.4.1/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+      /* 让滚动时内容不会被顶部菜单遮挡 */
+      main { padding-top: 88px; }
+    </style>
+  </head>
+  <body class="bg-gray-50 text-gray-900">
+    <!-- 顶部菜单栏，固定在顶部 -->
+    <header class="fixed top-0 left-0 w-full bg-white shadow z-50">
+      <div class="max-w-5xl mx-auto px-4 py-4 flex justify-between items-center">
+        <div class="text-2xl font-bold">我的产品</div>
+        <nav class="space-x-6">
+          <a href="#" class="text-gray-700 hover:text-blue-600">首页</a>
+          <a href="#" class="text-blue-600 font-semibold">定价</a>
+          <a href="#" class="text-gray-700 hover:text-blue-600">功能</a>
+          <a href="#" class="text-gray-700 hover:text-blue-600">企业</a>
+        </nav>
+        <div>
+          <a href="#" class="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700 transition">登录</a>
+        </div>
+      </div>
+    </header>
+    <main class="max-w-5xl mx-auto px-4 py-12">
+      <h1 class="text-4xl font-bold mb-4 text-center">定价</h1>
+      <p class="text-center text-gray-500 mb-12">选择最适合您的方案</p>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Hobby -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center border border-gray-100">
+          <div class="text-lg font-semibold mb-2">Hobby</div>
+          <div class="text-3xl font-bold mb-4">免费</div>
+          <ul class="mb-6 text-gray-600 space-y-2 text-center">
+            <li>Pro 版两周试用</li>
+            <li>有限的 agent 请求</li>
+            <li>有限的 tab 补全</li>
+          </ul>
+          <button class="w-full py-2 rounded-lg bg-gray-200 text-gray-700 font-semibold hover:bg-gray-300 transition">下载</button>
+        </div>
+        <!-- Pro -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center border-2 border-blue-600">
+          <div class="text-lg font-semibold mb-2">Pro</div>
+          <div class="text-3xl font-bold mb-4">¥20<span class="text-base font-normal">/月</span></div>
+          <ul class="mb-6 text-gray-600 space-y-2 text-center">
+            <li>Hobby 的所有功能</li>
+            <li>无限 tab 补全</li>
+            <li>访问后台 Agents</li>
+            <li>访问 Bug Bot</li>
+            <li>访问最大上下文窗口</li>
+          </ul>
+          <button class="w-full py-2 rounded-lg bg-blue-600 text-white font-semibold hover:bg-blue-700 transition">开通 Pro</button>
+        </div>
+        <!-- Ultra -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center border border-gray-100">
+          <div class="text-lg font-semibold mb-2">Ultra</div>
+          <div class="text-3xl font-bold mb-4">¥200<span class="text-base font-normal">/月</span></div>
+          <ul class="mb-6 text-gray-600 space-y-2 text-center">
+            <li>Pro 的所有功能</li>
+            <li>20倍使用量</li>
+            <li>访问 PR 索引</li>
+          </ul>
+          <button class="w-full py-2 rounded-lg bg-blue-100 text-blue-700 font-semibold hover:bg-blue-200 transition">开通 Ultra</button>
+        </div>
+        <!-- Teams -->
+        <div class="bg-white rounded-2xl shadow-lg p-8 flex flex-col items-center border border-gray-100">
+          <div class="text-lg font-semibold mb-2">Teams</div>
+          <div class="text-3xl font-bold mb-4">¥40<span class="text-base font-normal">/用户/月</span></div>
+          <ul class="mb-6 text-gray-600 space-y-2 text-center">
+            <li>Pro 的所有功能</li>
+            <li>团队隐私模式</li>
+            <li>管理员仪表板</li>
+            <li>集中式团队计费</li>
+            <li>SSO 支持</li>
+          </ul>
+          <button class="w-full py-2 rounded-lg bg-blue-100 text-blue-700 font-semibold hover:bg-blue-200 transition">开通 Teams</button>
+        </div>
+      </div>
+      <div class="mt-16 text-center text-gray-400 text-sm">
+        © 2025 Made by 你自己
+      </div>
+    </main>
+  </body>
+</html>
