@@ -30,5 +30,9 @@ This policy will help you understand the following:
 
 - This application only provides content that does not rely on users' personal privacy data
 
+---
+
+**Updated Date** 2025-06-19
+**Effective Date** 2025-06-19
 
 
