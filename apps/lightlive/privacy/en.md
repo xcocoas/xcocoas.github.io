@@ -4,9 +4,8 @@
 ## Data Collection and Usage
 
 - No private data is collected during use.  
-- All data processing occurs locally within your device's sandbox.  
-- When importing or exporting files, copies are created within the local sandbox. 
-- These file copies are used solely for local functionality and are not transmitted to any servers.  
+- All data processing is performed on your local device.
+- The relevant data will not be transmitted to any server.
 
 ## How to Delete Related Data
 
