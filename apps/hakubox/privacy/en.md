@@ -16,3 +16,9 @@
 
 - We do not collect, store, or upload any of your personal data or usage data.  
 - We do not track your usage behavior or activities.
+
+---
+
+**Updated Date** 2025-07-23
+
+**Effective Date** 2025-07-23
