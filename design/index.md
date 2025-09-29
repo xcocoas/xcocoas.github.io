@@ -64,6 +64,26 @@
 </div>
 
 
+[<span style="color:#F0E68C; background-color: #000; padding: 8px; border-radius: 8px;">App Store ✨</span>](https://apps.apple.com/cn/app/lightlive/id6746684792)
+
+
+<hr style="border: none; height: 1px; background: linear-gradient(90deg, transparent, #FFB6C1, transparent)">
+
+	点击以上链接会自动跳转页面
+
+***
+
+	点击以上链接会自动跳转页面
+
+<div style="text-align: left; color: #DDA0DD; margin: 20px 0">
+🎀 🎀 🎀
+</div>
+
+<hr style="border: 1px solid #87CEEB; margin: 30px 0">
+
+	点击以上链接会自动跳转页面
+
+
 
 
 
