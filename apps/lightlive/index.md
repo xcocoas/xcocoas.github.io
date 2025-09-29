@@ -15,7 +15,7 @@
 
 ### 教程链接
 
-[<span style="color:#DDA0DD; background-color:#000">视频转实况图</span>](http://xhslink.com/o/3gyfoWiPEc3)
+[<span style="color:#DDA0DD; background-color: #000; padding: 8px; border-radius: 8px;">视频转实况图</span>](http://xhslink.com/o/3gyfoWiPEc3)
 
 ### 下载链接
 
