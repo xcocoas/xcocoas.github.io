@@ -33,7 +33,7 @@
 <span style="color:#87CEFA; background-color:#2C2B4D">深海宝石蓝</span>
 <span style="color:#98FB98; background-color:#3D2B3D">莓果巧克力</span>
 
-# 少女感字体颜色搭配
+# 字体颜色搭配
 
 ## 甜美色系
 
