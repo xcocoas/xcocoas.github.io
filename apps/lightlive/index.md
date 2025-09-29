@@ -1,28 +1,24 @@
 
-# Lightlive
-
-## 快捷指令
-
-[转实况图 P2](https://www.icloud.com/shortcuts/48444e5a54e34b7ca1091573a8d07749)
-
-[转实况图 P3](https://www.icloud.com/shortcuts/94af7d62dae84145bd63855abfca5c24)
-
-[转实况图 P4](https://www.icloud.com/shortcuts/3e676aff669845838763362db085a3b6)
-
-[转实况图 P5](https://www.icloud.com/shortcuts/541783f81f854198a8070e4de92afe9f)
-
-[转实况图 整合版](https://www.icloud.com/shortcuts/5111cb1cbc054196887ed29d9adbc21e)
-
-## 下载链接
-
-[App Store](https://apps.apple.com/cn/app/lightlive/id6746684792)
+# <span style="color:#FFF">Lightlive</span>
 
 
-# 颜色示例
-[<span style="color:#F0E68C; background-color:#2A1B3D">✨ 淡鹅黄</span>](https://baidu.com)
+## <span style="color:#FFF">快捷指令</span>
+
+<div style="background-color:#708090; padding:15px; border-radius:8px">
+	[<span style="color:#FFB6C1">✨ 转实况图 P2 ✨</span>](https://www.icloud.com/shortcuts/48444e5a54e34b7ca1091573a8d07749)<br>
+	[<span style="color:#DDA0DD">转实况图 P3</span>](https://www.icloud.com/shortcuts/94af7d62dae84145bd63855abfca5c24)<br>
+	[<span style="color:#87CEEB">转实况图 P4</span>](https://www.icloud.com/shortcuts/3e676aff669845838763362db085a3b6)<br>
+	[<span style="color:#87CEEB">转实况图 P5</span>](https://www.icloud.com/shortcuts/541783f81f854198a8070e4de92afe9f)<br>
+	[<span style="color:#DDA0DD">转实况图 整合版</span>](https://www.icloud.com/shortcuts/5111cb1cbc054196887ed29d9adbc21e)<br>
+</div>
 
 
+## <span style="color:#FFF">下载链接</span>
 
+[<span style="color:#F0E68C; background-color:#708090; padding:15px; border-radius:8px">✨ App Store</span>](https://apps.apple.com/cn/app/lightlive/id6746684792)
+
+
+---
 
 
 
@@ -55,13 +51,9 @@
 <span style="color:#F0E68C; background-color:#2A1B3D">✨ 淡鹅黄</span>
 
 
-# 使用示例
+---
 
-<div style="background-color:#2A1B3D; padding:15px; border-radius:8px">
-<span style="color:#FFB6C1">✨ 欢迎来到梦幻世界 ✨</span><br>
-<span style="color:#DDA0DD">这里充满了魔法和惊喜</span><br>
-<span style="color:#87CEEB">每一天都是新的冒险</span>
-</div>
+
 
 
 
