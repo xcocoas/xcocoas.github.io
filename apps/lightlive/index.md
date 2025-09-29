@@ -13,6 +13,10 @@
 
 [<span style="color:#FFB6C1; background-color: #000; padding: 8px; border-radius: 8px;">转实况图 整合版</span>](https://www.icloud.com/shortcuts/5111cb1cbc054196887ed29d9adbc21e)
 
+### 教程链接
+
+[<span style="color:#DDA0DD; background-color:#000">视频转实况图</span>](http://xhslink.com/o/3gyfoWiPEc3)
+
 ### 下载链接
 
 [<span style="color:#F0E68C; background-color: #000; padding: 8px; border-radius: 8px;">App Store ✨</span>](https://apps.apple.com/cn/app/lightlive/id6746684792)
