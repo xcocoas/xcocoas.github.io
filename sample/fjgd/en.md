@@ -1,9 +1,9 @@
 
-# 福建广电PHP
+# <span class="color-white">福建广电PHP</span>
 
-### 源码
+### <span class="color-white">源码</span>
 
-<div class="wrap-text color-orange">
+<div class="color-orange">
 
 	<?php
 
@@ -38,15 +38,15 @@
 
 </div>
 
-### 参数
+### <span class="color-white">参数</span>
 
-<div class="wrap-text color-yellow">
+<div class="color-yellow">
 	更换`$ptoken`和`$l`即可
 </div>
 
-### ID对照表
+### <span class="color-white">ID对照表</span>
 
-<div class="wrap-text color-green">
+<div class="color-green">
 
 	CCTV央视
 	'cctv1hd_2000',		//CCTV-1高清
