@@ -13,4 +13,4 @@ While constructing, feel free to reach out:
 
 ---
 
-<img src="static/a1.jpg" class="size-70"></img>[μ](debug/english)[π](debug/japanese)[σ](https://apps.apple.com/cn/app/lightlive/id6746684792)[ζ](games/gbstudio/sample)..
+<img src="static/a1.jpg" class="size-70"></img>[...](debug/english)[...](debug/japanese)[...](https://apps.apple.com/cn/app/lightlive/id6746684792)[...](games/gbstudio/sample)
