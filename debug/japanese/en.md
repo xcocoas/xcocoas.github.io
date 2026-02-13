@@ -1,7 +1,7 @@
 
 # 英语寒假作业の听力
 
-### 在线播放（文件较大需等待加载）
+### <span class="color-orange">在线播放（文件较大需等待加载）</span>
 
 寒假作业听力1
 
@@ -15,6 +15,6 @@
   <source src="寒假作业听力2.mp3" type="audio/mpeg">
 </audio>
 
-### 备用下载链接
+### <span class="color-green">备用下载链接</span>
 
 [蓝奏云](https://wwarj.lanzout.com/b0pnepc5a) 密码:c33o
