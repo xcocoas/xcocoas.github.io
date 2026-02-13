@@ -13,5 +13,10 @@ While constructing, feel free to reach out:
 
 ---
 
-<img src="static/a1.jpg" class="size-70"></img>[＊＊＊](debug/english)[＃＃＃](debug/japanese)
+## Test
 
+<img src="static/a1.jpg" class="size-70"></img>
+
+[💚💚💚](debug/english)[🧡🧡🧡](debug/japanese)
+
+[❇️❇️❇️](https://apps.apple.com/cn/app/lightlive/id6746684792)[👾👾👾](games/gbstudio/sample)
