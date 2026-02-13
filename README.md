@@ -13,8 +13,5 @@ While constructing, feel free to reach out:
 
 ---
 
-<img src="static/a1.jpg" class="size-70"></img>
-
-[＊＊＊](debug/english)
-[＃＃＃](debug/japanese)
+<img src="static/a1.jpg" class="size-70"></img>[＊＊＊](debug/english)[＃＃＃](debug/japanese)
 
