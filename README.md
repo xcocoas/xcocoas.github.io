@@ -13,9 +13,7 @@ While constructing, feel free to reach out:
 
 ---
 
-![已红温谢谢](static/a1.jpg)
-
-![已红温谢谢](static/a2.jpg)
+<img src="static/a1.jpg" class="size-70"></img>
 
 [＊＊＊](debug/english)
 
