@@ -13,5 +13,7 @@ While constructing, feel free to reach out:
 
 ---
 
+![已红温谢谢](static/a1.jpg)
 
+![已红温谢谢](statica2.jpg)
 
