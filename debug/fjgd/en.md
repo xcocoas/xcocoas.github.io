@@ -11,8 +11,8 @@
 
 	// 从抓包中获取
 	$user = 'freeuser';
-	$ptoken = '...';
-	$l = '...';
+	$ptoken = 'MDc1NDNkMDZkNzdmNmNmOA==';
+	$l = 'EJbaFsNCT7QZ1ciU7DGwmA==';
 
 	$t = time();
 	$nonce = rand(100000,999999);
