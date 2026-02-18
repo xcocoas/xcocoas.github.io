@@ -1,77 +1,300 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0; user-scalable=0">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
-    <meta name="apple-touch-fullscreen" content="yes" />
-    <meta name="format-detection" content="telephone=no, email=no">
-
-    <title>今天学习了吗</title>
-
-    <!-- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script> -->
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/github-markdown-css"> -->
-    <script src="/decorator/marked.min.js"></script>
-    <link rel="stylesheet" href="/decorator/github-markdown-css">
-
-    <style>
-        body {
-            background-color: #EEE;
-        }
-        .markdown-body {
-            /*width: 100%;*/
-            box-sizing: border-box;
-            min-width: 200px;
-            max-width: 980px;
-            margin: 0 auto;
-            padding: 16px;
-            font-family: monospace;
-        }
-        .color-white {
-            color: #FFF;
-        }
-        .color-orange {
-            color: #FFA07A;
-        }
-        .color-yellow {
-            color: #FFD700;
-        }
-        .color-green {
-            color: #98FB98;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Listening</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <!-- 引入二维码解析库 jsQR -->
+  <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script>
 </head>
-<body>
-    <div id="content" class="markdown-body">LOADING ...</div>
-    
-    <script>
-        // 获取URL参数
-        const params = new URLSearchParams(window.location.search);
-        const lang = params.get('lang') || 'en'; // 默认英语
+<body class="bg-gray-50 min-h-screen">
+  <div class="container mx-auto px-4 py-8 max-w-3xl">
+    <!-- 列表区域 -->
+    <div id="list-section" class="mb-8">
+      <h1 class="text-2xl font-bold text-gray-800 mb-4">英语每日一听（汇总）</h1>
+
+      <!-- 表情包展示容器（居左 + 下方空行） -->
+<div class="w-[200px] h-[200px] rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 mb-4">
+  <!-- 替换 src 为你的表情包图片链接/本地路径 -->
+  <img src="header.jpeg" alt="表情包" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+</div>
+
+
+      <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
+        <ul id="list-container" class="divide-y divide-gray-200"></ul>
+      </div>
+    </div>
+
+    <!-- 新增：loading 遮罩层（初始隐藏） -->
+<div id="loading-mask" class="hidden fixed inset-0 bg-black/20 flex items-center justify-center z-50">
+  <div class="bg-white p-4 rounded-lg flex items-center gap-3">
+    <div class="w-6 h-6 border-4 border-green-500 border-t-transparent rounded-full animate-spin"></div>
+    <span class="text-gray-700">加载中...</span>
+  </div>
+</div>
+
+    <!-- 详情区域 -->
+    <div id="detail-section" class="hidden bg-white rounded-lg border border-gray-200 p-6">
+      <!-- 返回按钮单独一行 -->
+      <div class="mb-6">
+        <button id="back-btn" class="text-blue-600 hover:text-blue-800 transition-colors">
+          <i class="fa-solid fa-arrow-left mr-1"></i> 返回列表
+        </button>
+      </div>
+      
+      <h2 id="detail-title" class="text-xl font-semibold mb-6"></h2>
+
+      <!-- 二维码区域（自动解析） -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+        <div class="text-center">
+          <div id="q1" class="w-40 h-40 mx-auto mb-2 bg-white border rounded-md flex items-center justify-center">
+            <i class="fa-solid fa-qrcode text-gray-300 text-5xl"></i>
+          </div>
+          <div id="l1-container" class="text-sm">
+            <span class="text-gray-500">解析中...</span>
+          </div>
+        </div>
+        <div class="text-center">
+          <div id="q2" class="w-40 h-40 mx-auto mb-2 bg-white border rounded-md flex items-center justify-center">
+            <i class="fa-solid fa-qrcode text-gray-300 text-5xl"></i>
+          </div>
+          <div id="l2-container" class="text-sm">
+            <span class="text-gray-500">解析中...</span>
+          </div>
+        </div>
+        <div class="text-center">
+          <div id="q3" class="w-40 h-40 mx-auto mb-2 bg-white border rounded-md flex items-center justify-center">
+            <i class="fa-solid fa-qrcode text-gray-300 text-5xl"></i>
+          </div>
+          <div id="l3-container" class="text-sm">
+            <span class="text-gray-500">解析中...</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 密码区域 -->
+      <div class="bg-gray-50 p-4 rounded-lg border">
+        <h3 class="text-lg font-medium mb-3">访问密码</h3>
+        <div class="flex flex-wrap md:flex-nowrap items-center gap-3">
+          <input id="pwd" class="w-full md:flex-1 px-3 py-2 border rounded-md text-sm" readonly>
+          <button id="copy-pwd" class="min-w-[100px] px-4 py-2 bg-green-600 text-white rounded-md text-sm whitespace-nowrap">
+            <i class="fa-solid fa-copy mr-1"></i>复制密码
+          </button>
+        </div>
+      </div>
+
+      <!-- 提示 -->
+      <div id="toast" class="hidden fixed bottom-8 left-1/2 -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-md z-10">
+        复制成功！
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // 数据 - 仅保留二维码图片路径和密码，移除手动links
+    const linkData = [
+      {
+        id: 0209,
+        title: "2.9【每天一套听力】 参考答案（密码：260123）",
+        pwd: "260123",
+        // 替换为你的本地二维码图片路径
+        qrcodes: ["0209/s1.png", "0209/s2.png", "0209/s3.png"]
+      },
+      {
+        id: 0210,
+        title: "2.10【每天一套听力】 参考答案（密码：261010）",
+        pwd: "261010",
+        qrcodes: ["0210/s1.png", "0210/s2.png", "0210/s3.png"]
+      },
+      {
+        id: 0211,
+        title: "2.11【每天一套听力】 参考答案（密码：260211）",
+        pwd: "260211",
+        qrcodes: ["0211/s1.png", "0211/s2.png", "0211/s3.png"]
+      },
+      {
+        id: 0212,
+        title: "2.12【每天一套听力】 参考答案（密码：262012）",
+        pwd: "262012",
+        qrcodes: ["0212/s1.png", "0212/s2.png", "0212/s3.png"]
+      },
+      {
+        id: 0213,
+        title: "2.13【每天一套听力】 参考答案（密码：260513）",
+        pwd: "260513",
+        qrcodes: ["0213/s1.png", "0213/s2.png", "0213/s3.png"]
+      },
+      {
+        id: 0214,
+        title: "2.14【每天一套听力】 参考答案（密码：260214）",
+        pwd: "260214",
+        qrcodes: ["0214/s1.png", "0214/s2.png", "0214/s3.png"]
+      },
+      {
+        id: 0215,
+        title: "2.15【每天一套听力】 参考答案（密码：261530）",
+        pwd: "261530",
+        qrcodes: ["0215/s1.png", "0215/s2.png", "0215/s3.png"]
+      },
+    ];
+
+    // 工具：获取 URL 参数
+    function getQueryParam(key) {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(key);
+    }
+
+    // 核心：解析二维码图片内容
+    function decodeQrCode(imagePath, linkContainerId) {
+      return new Promise((resolve, reject) => {
+        // 创建img元素加载图片
+        const img = new Image();
+        // 解决本地图片跨域问题（本地测试需注意：如果是file://协议，部分浏览器可能限制）
+        img.crossOrigin = 'anonymous';
         
-        // 根据参数决定加载哪个文件
-        const fileMap = {
-            'en': 'en.md',
-            'zh': 'zh.md'
-            // 可以添加更多语言
+        img.onload = function() {
+          // 创建canvas用于解析
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+          canvas.width = img.width;
+          canvas.height = img.height;
+          ctx.drawImage(img, 0, 0);
+          
+          // 获取像素数据并解析
+          const imageData = ctx.getImageData(0, 0, canvas.width, canvas.height);
+          const code = jsQR(imageData.data, canvas.width, canvas.height);
+          
+          if (code) {
+            resolve(code.data); // 解析成功，返回二维码内容（链接）
+          } else {
+            reject(new Error("二维码解析失败"));
+          }
         };
         
-        const filename = fileMap[lang] || 'en.md';
+        img.onerror = function() {
+          reject(new Error("图片加载失败"));
+        };
         
-        fetch(filename)
-            .then(response => {
-                if (!response.ok) throw new Error('File not found');
-                return response.text();
-            })
-            .then(markdown => {
-                document.getElementById('content').innerHTML = marked.parse(markdown);
-            })
-            .catch(err => {
-                document.getElementById('content').innerHTML = 
-                    `<p style="color: red">Error loading ${filename}: ${err.message}</p>`;
-            });
+        // 最后加载图片（关键：避免提前请求）
+        img.src = imagePath;
+      });
+    }
 
-    </script>
+    // 渲染列表（倒序）
+    function renderList() {
+      const list = document.getElementById('list-container');
+      list.innerHTML = '';
+      [...linkData].reverse().forEach(item => {
+        const li = document.createElement('li');
+        li.className = 'p-4 hover:bg-gray-50 cursor-pointer';
+        li.innerText = item.title;
+        li.onclick = () => showDetail(item.id);
+        list.appendChild(li);
+      });
+    }
+
+    // 显示详情（自动解析二维码）
+async function showDetail(id) {
+  // 新增：显示 loading
+  const loadingMask = document.getElementById('loading-mask');
+  loadingMask.classList.remove('hidden');
+
+  const item = linkData.find(x => x.id == id);
+  if (!item) {
+    // 新增：找不到数据时隐藏 loading
+    loadingMask.classList.add('hidden');
+    return;
+  }
+
+  // 更新标题和密码
+  document.getElementById('detail-title').innerText = item.title;
+  const pwdInput = document.getElementById('pwd');
+  pwdInput.value = item.pwd;
+
+  // 二维码容器和链接容器
+  const qrs = [
+    document.getElementById('q1'),
+    document.getElementById('q2'),
+    document.getElementById('q3')
+  ];
+  const linkContainers = [
+    document.getElementById('l1-container'),
+    document.getElementById('l2-container'),
+    document.getElementById('l3-container')
+  ];
+
+  // 遍历解析每个二维码
+  for (let i = 0; i < item.qrcodes.length; i++) {
+    const qrPath = item.qrcodes[i];
+    const qrContainer = qrs[i];
+    const linkContainer = linkContainers[i];
+    
+    // 1. 显示二维码图片
+    qrContainer.innerHTML = `<img src="${qrPath}" class="w-full h-full object-contain" alt="二维码${i+1}">`;
+    
+    try {
+      // 2. 解析二维码内容
+      const link = await decodeQrCode(qrPath, linkContainer);
+      // 3. 显示可点击的链接
+      linkContainer.innerHTML = `<a href="${link}" target="_blank" class="text-blue-600 hover:underline break-all">${link}</a>`;
+    } catch (err) {
+      // 4. 解析失败的容错处理
+      linkContainer.innerHTML = `<span class="text-red-500 text-sm">${err.message}</span>`;
+    }
+  }
+
+  // 切换显示状态
+  document.getElementById('list-section').classList.add('hidden');
+  document.getElementById('detail-section').classList.remove('hidden');
+
+  // 新增：所有内容加载完成后隐藏 loading
+  loadingMask.classList.add('hidden');
+}
+
+    // 复制密码功能（已修复报错）
+    document.getElementById('copy-pwd').addEventListener('click', () => {
+      const pwdInput = document.getElementById('pwd');
+      if (!pwdInput) {
+        alert('密码输入框未找到！');
+        return;
+      }
+      
+      try {
+        pwdInput.select();
+        navigator.clipboard.writeText(pwdInput.value).then(() => {
+          const toast = document.getElementById('toast');
+          toast.classList.remove('hidden');
+          setTimeout(() => toast.classList.add('hidden'), 2000);
+        }).catch(() => {
+          document.execCommand('copy');
+          const toast = document.getElementById('toast');
+          toast.classList.remove('hidden');
+          setTimeout(() => toast.classList.add('hidden'), 2000);
+        });
+      } catch (err) {
+        alert('复制失败：' + err.message);
+      }
+    });
+
+    // 返回列表
+document.getElementById('back-btn').addEventListener('click', () => {
+  // 新增：返回时确保 loading 隐藏
+  document.getElementById('loading-mask').classList.add('hidden');
+  
+  document.getElementById('detail-section').classList.add('hidden');
+  document.getElementById('list-section').classList.remove('hidden');
+});
+
+    // 页面加载初始化
+    window.addEventListener('load', () => {
+      renderList();
+      const id = getQueryParam('id');
+      if (id) {
+        setTimeout(() => showDetail(id), 100);
+      }
+    });
+  </script>
 </body>
 </html>
