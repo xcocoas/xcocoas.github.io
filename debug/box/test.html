@@ -46,20 +46,20 @@
             <div class="space-y-6">
                 <!-- 第一个音频播放器 -->
                 <div class="p-4 border border-gray-200 rounded-lg">
-                    <p class="text-gray-600 mb-2">寒假作业听力1</p>
+                    <p class="text-gray-600 mb-2">音频文件 1</p>
                     <audio controls class="w-full">
                         <!-- 替换为你的第一个本地 MP3 文件路径 -->
-                        <source src="寒假作业听力1.mp3" type="audio/mpeg">
+                        <source src="audio1.mp3" type="audio/mpeg">
                         你的浏览器不支持音频播放功能，请更换浏览器后重试。
                     </audio>
                 </div>
 
                 <!-- 第二个音频播放器 -->
                 <div class="p-4 border border-gray-200 rounded-lg">
-                    <p class="text-gray-600 mb-2">寒假作业听力2</p>
+                    <p class="text-gray-600 mb-2">音频文件 2</p>
                     <audio controls class="w-full">
                         <!-- 替换为你的第二个本地 MP3 文件路径 -->
-                        <source src="寒假作业听力2.mp3" type="audio/mpeg">
+                        <source src="audio2.mp3" type="audio/mpeg">
                         你的浏览器不支持音频播放功能，请更换浏览器后重试。
                     </audio>
                 </div>
@@ -67,45 +67,33 @@
         </div>
 
         <!-- 网盘链接区域 -->
-<div class="mb-8">
-    <h2 class="text-xl font-semibold text-gray-700 mb-4 flex items-center gap-2">
-        <i class="fa-solid fa-cloud text-primary"></i>
-        网盘链接
-    </h2>
-    <div class="p-5 border border-gray-200 rounded-lg bg-gray-50 hover:shadow-sm transition-shadow duration-300">
-        <!-- 网盘链接展示 -->
-        <div class="mb-5">
-            <label class="block text-gray-600 mb-2 font-medium text-sm">链接地址：</label>
-            <!-- 可点击的超链接（优化样式） -->
-            <a href="https://wwarj.lanzout.com/b0pnepc5a" 
-               target="_blank" 
-               rel="noopener noreferrer"
-               class="text-primary break-all bg-blue-50 hover:bg-blue-100 px-4 py-2.5 rounded-lg border border-blue-100 hover:border-primary transition-all duration-200 flex items-center gap-2 w-full hover:shadow-sm" 
-               id="panLink">
-                <i class="fa-solid fa-link text-sm text-primary/80"></i>
-                <!-- 网盘链接 -->
-                https://wwarj.lanzout.com/b0pnepc5a
-            </a>
-        </div>
+        <div class="mb-8">
+            <h2 class="text-xl font-semibold text-gray-700 mb-4">网盘链接</h2>
+            <div class="p-4 border border-gray-200 rounded-lg bg-gray-50">
+                <!-- 网盘链接展示 -->
+                <div class="mb-4">
+                    <label class="block text-gray-600 mb-1">链接地址：</label>
+                    <p class="text-primary break-all" id="panLink">
+                        <!-- 替换为你的网盘链接 -->
+                        https://pan.baidu.com/s/1234567890abcdef
+                    </p>
+                </div>
 
-        <!-- 网盘密码与复制按钮 - 优化响应式布局+样式 -->
-        <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
-            <label class="block text-gray-600 shrink-0 text-sm font-medium">访问密码：</label>
-            <!-- 网盘访问密码（优化样式） -->
-            <span class="py-2 px-4 bg-gray-100 hover:bg-gray-200 rounded-lg text-gray-800 shrink-0 font-medium transition-colors duration-200" id="panPassword">c33o</span>
-            <!-- 复制按钮（优化样式+交互） -->
-            <button id="copyBtn" class="bg-primary hover:bg-primary/90 active:bg-primary/80 text-white py-2 px-5 rounded-lg btn-hover flex items-center gap-2 shrink-0 w-full sm:w-auto justify-center sm:justify-start shadow-sm hover:shadow">
-                <i class="fa-solid fa-copy"></i>
-                <span>复制密码</span>
-            </button>
-            <!-- 复制成功提示（优化样式） -->
-            <span class="text-green-600 hidden self-start sm:self-center text-sm font-medium flex items-center gap-1" id="copyTip">
-                <i class="fa-solid fa-check-circle"></i>
-                复制成功！
-            </span>
+                <!-- 网盘密码与复制按钮 - 优化响应式布局 -->
+                <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                    <label class="block text-gray-600 shrink-0">访问密码：</label>
+                    <!-- 替换为你的网盘访问密码 -->
+                    <span class="py-1 px-3 bg-gray-100 rounded text-gray-800 shrink-0" id="panPassword">8888</span>
+                    <button id="copyBtn" class="bg-primary text-white py-1 px-4 rounded btn-hover flex items-center gap-2 shrink-0 w-full sm:w-auto justify-center sm:justify-start">
+                        <i class="fa-solid fa-copy"></i>
+                        <span>复制密码</span>
+                    </button>
+                    <!-- 复制成功提示 - 调整对齐方式 -->
+                    <span class="text-green-600 hidden self-start sm:self-center" id="copyTip">复制成功！</span>
+                </div>
+            </div>
         </div>
     </div>
-</div>
 
     <!-- 复制功能脚本 -->
     <script>
