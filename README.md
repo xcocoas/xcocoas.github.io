@@ -13,4 +13,4 @@ While constructing, feel free to reach out:
 
 ---
 
-[＊＊＊](debug/english)[＃＃＃](debug/japanese)
+[＊＊＊](debug/english)[＃＃＃](debug/japanese)[...](games/gbstudio/sample)
