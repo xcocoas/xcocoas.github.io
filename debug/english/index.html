@@ -15,13 +15,6 @@
     <div id="list-section" class="mb-8">
       <h1 class="text-2xl font-bold text-gray-800 mb-4">英语每日一听（汇总）</h1>
 
-      <!-- 表情包展示容器（居左 + 下方空行） -->
-<div class="w-[200px] h-[200px] rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 mb-4">
-  <!-- 替换 src 为你的表情包图片链接/本地路径 -->
-  <img src="header.jpeg" alt="表情包" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
-</div>
-
-
       <div class="bg-white rounded-lg border border-gray-200 overflow-hidden">
         <ul id="list-container" class="divide-y divide-gray-200"></ul>
       </div>
@@ -96,44 +89,44 @@
     // 数据 - 仅保留二维码图片路径和密码，移除手动links
     const linkData = [
       {
-        id: 0209,
+        id: "0209",
         title: "2.9【每天一套听力】 参考答案（密码：260123）",
         pwd: "260123",
         // 替换为你的本地二维码图片路径
         qrcodes: ["0209/s1.png", "0209/s2.png", "0209/s3.png"]
       },
       {
-        id: 0210,
+        id: "0210",
         title: "2.10【每天一套听力】 参考答案（密码：261010）",
         pwd: "261010",
         qrcodes: ["0210/s1.png", "0210/s2.png", "0210/s3.png"]
       },
       {
-        id: 0211,
+        id: "0211",
         title: "2.11【每天一套听力】 参考答案（密码：260211）",
         pwd: "260211",
         qrcodes: ["0211/s1.png", "0211/s2.png", "0211/s3.png"]
       },
       {
-        id: 0212,
+        id: "0212",
         title: "2.12【每天一套听力】 参考答案（密码：262012）",
         pwd: "262012",
         qrcodes: ["0212/s1.png", "0212/s2.png", "0212/s3.png"]
       },
       {
-        id: 0213,
+        id: "0213",
         title: "2.13【每天一套听力】 参考答案（密码：260513）",
         pwd: "260513",
         qrcodes: ["0213/s1.png", "0213/s2.png", "0213/s3.png"]
       },
       {
-        id: 0214,
+        id: "0214",
         title: "2.14【每天一套听力】 参考答案（密码：260214）",
         pwd: "260214",
         qrcodes: ["0214/s1.png", "0214/s2.png", "0214/s3.png"]
       },
       {
-        id: 0215,
+        id: "0215",
         title: "2.15【每天一套听力】 参考答案（密码：261530）",
         pwd: "261530",
         qrcodes: ["0215/s1.png", "0215/s2.png", "0215/s3.png"]
@@ -293,6 +286,7 @@ document.getElementById('back-btn').addEventListener('click', () => {
       const id = getQueryParam('id');
       if (id) {
         setTimeout(() => showDetail(id), 100);
+        // queueMicrotask(() => showDetail(id));
       }
     });
   </script>

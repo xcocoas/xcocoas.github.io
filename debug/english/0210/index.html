@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="1;url=" id="redirectMeta">
+    <title>页面跳转中...</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        .tip {
+            text-align: center;
+        }
+        a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="tip">
+        <p>页面正在跳转中...</p>
+        <p>如果没有自动跳转，请点击 <a id="manualLink">这里</a></p>
+    </div>
+
+    <script>
+        // 只需要修改这一个地方的URL即可
+        const TARGET_URL = "https://xcocoas.com/debug/english/?id=0210";
+        
+        // 自动给meta标签和手动链接赋值
+        document.getElementById("redirectMeta").content = `1;url=${TARGET_URL}`;
+        document.getElementById("manualLink").href = TARGET_URL;
+    </script>
+</body>
+</html>
