@@ -2,6 +2,8 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
+    <!-- 核心新增：移动端视口适配，让页面按设备宽度显示 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="refresh" content="1;url=" id="redirectMeta">
     <title>页面跳转中...</title>
     <style>
@@ -13,13 +15,29 @@
             margin: 0;
             font-family: Arial, sans-serif;
             color: #333;
+            /* 移动端优化：背景色避免纯白刺眼，适配滚动 */
+            background-color: #f8f9fa;
+            padding: 0 20px; /* 左右留白，避免文字贴边 */
+            box-sizing: border-box;
         }
         .tip {
             text-align: center;
+            /* 移动端优化：放大文字、增加间距 */
+            font-size: 18px; /* 基础字号，比默认16px大，移动端更清晰 */
+            line-height: 1.8; /* 行高增加，提升可读性 */
         }
         a {
             color: #0066cc;
             text-decoration: none;
+            /* 移动端优化：链接加粗+下划线，更易识别 */
+            font-weight: 500;
+            text-decoration: underline;
+        }
+        /* 可选：小屏手机再放大一点字号 */
+        @media (max-width: 375px) {
+            .tip {
+                font-size: 20px;
+            }
         }
     </style>
 </head>
